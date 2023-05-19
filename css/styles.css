@@ -573,7 +573,7 @@ body {
   }
   .footer__menu-link a {
     font-size: 17px !important;
-    color: red;
+    color: hsl(168deg, 34%, 45%);
   }
   .footer__menu-link:nth-child(2) {
     margin-left: 55px;
