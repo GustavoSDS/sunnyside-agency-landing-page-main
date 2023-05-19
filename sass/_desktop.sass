@@ -1,0 +1,181 @@
+@use 'variables' as var
+@media screen and ( min-width: 1280px )
+  .header
+    height: 785px
+    padding: 32px 47px 0px 38px
+    background-image: url('../images/desktop/image-header.jpg')
+    background-position: center
+    .nav
+      display: none
+    .nav-desktop
+      display: block
+
+      &__menu
+        width: 550px
+        height: 55px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        list-style: none
+
+        &-link
+          transition: all 0.3s ease
+          a
+            text-decoration: none
+            color: var.$White
+            font-size: 20px
+            font-weight: 600
+          &:hover, a:hover
+            color: var.$Very-dark-desaturated-blue
+            transform: scale(1.1)
+
+          &--active
+            width: calc( 550px / 4 )
+            height: 55px
+            display: grid
+            place-content: center
+            cursor: pointer
+            border-radius: 28px
+            font-family: var.$font-fraunces
+            color: var.$Very-dark-desaturated-blue !important
+            text-transform: uppercase
+            background-color: var.$White
+
+            &:hover
+              transform: scale(1) !important
+              color: var.$White !important
+              background-color: var.$Dark-moderate-cyan-link
+
+    &__btn-menu
+      display: none
+
+    &__title
+      width: 761px
+      margin: 110px auto
+      font-size: 58px
+      line-height: 100%
+      text-align: left
+      letter-spacing: 0.14em
+
+    &__icon-arrow-down
+      background-size: 2.5%
+
+  .main
+    .services
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+
+    .card-service
+      height: 589px
+      &__img
+        &--transform
+          grid-column-start: 2
+          background-image: url('../images/desktop/image-transform.jpg')
+        &--stand
+          background-image: url('../images/desktop/image-stand-out.jpg')
+      &:nth-child(1)
+        grid-row-start: 1
+
+      &__details
+        padding-left: 108px
+        text-align: left
+
+        &-title
+          width: 450px
+          line-height: 49px
+          font-size: 40px
+          margin: 154px 0 0
+
+        &-description
+          margin: 40px 0
+          width: 432px
+          font-size: 16.5px
+          line-height: 29px
+          letter-spacing: 0.02em
+        &-btn
+          font-size: 16px
+          letter-spacing: .03em
+          &::before
+            height: 10px
+            bottom: -4px
+
+      &__others-services
+        background-position: center
+
+        &-title
+          font-size: 30px
+
+        &-description
+          width: 330px
+          font-size: 16px
+
+      &__graphic-design
+        background-image: url('../images/desktop/image-graphic-design.jpg')
+      &__photography
+        background-image: url('../images/desktop/image-photography.jpg')
+
+    .testimonials
+      height: 763px
+      &__title
+        margin: 160px auto 80px
+        font-size: 20px
+        letter-spacing: .26em
+      &__container
+        display: flex
+        align-items: center
+        justify-content: center
+      &__client
+        &-image
+          width: 71px
+          height: 71px
+          margin: 0 0 67px
+        &-testimonial
+          margin: 0 40px 72px 0
+          width: 375px
+          font-size: 20px
+          line-height: 31px
+          letter-spacing: -0.015em
+        &-name
+          font-size: 20px
+        &-profession
+          font-size: 14px
+          letter-spacing: -0.02em
+
+    .gallery
+      height: 440px
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      &__img
+        &-milk
+          background-image: url('../images/desktop/image-gallery-milkbottles.jpg')
+        &-orange
+          background-image: url('../images/desktop/image-gallery-orange.jpg')
+        &-cone
+          background-image: url('../images/desktop/image-gallery-cone.jpg')
+        &-sugar
+          background-image: url('../images/desktop/image-gallery-sugar-cubes.jpg')
+
+  .footer
+    height: 343px
+    &__logo
+      margin: 70px auto 40px
+
+    &__menu
+      justify-content: center
+      &-link
+        a
+          font-size: 17px !important
+          color: red
+        &:nth-child(2)
+          margin-left: 55px
+          margin-right: 55px
+
+    &__social-icons
+      justify-content: center
+      &-icon
+        margin-left: 12px
+        margin-right: 20px
+        width: 20px
+        background-size: contain

@@ -1,0 +1,23 @@
+@use 'variables' as var
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: var.$font-barlow
+
+.container
+  min-width: 360px
+  width: calc( 100vw - 44px )
+  max-width: 414px
+  height: 100%
+  margin: auto
+
+  @media screen and ( min-width: 1280px )
+    width: 1413px
+    max-width: 1440px
+
+.display-block
+  display: block !important
+  

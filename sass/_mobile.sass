@@ -1,0 +1,324 @@
+@use 'variables' as var
+
+.header
+  height: 538px
+  padding: 30px 24px 0px
+  position: relative
+  background:
+    image: url('../images/mobile/image-header.jpg')
+    repeat: no-repeat
+    size: cover
+    position: center bottom
+  &__logo:hover
+    cursor: pointer
+  &__btn-menu
+    background-color: transparent
+    border: none
+    &--active
+      filter: opacity(.6)
+    &:hover
+      cursor: pointer
+      filter: opacity(.6)
+
+  &__title
+    width: 240px
+    margin: 75px auto
+    font-family: var.$font-fraunces
+    font-weight: 900
+    font-size: 36px
+    color: var.$White
+    line-height: 38px
+    letter-spacing: 0.05em
+    text-align: center
+    text-transform: uppercase
+
+  &__icon-arrow-down
+    width: 100%
+    height: 100%
+    background:
+      image: url('../images/icon-arrow-down.svg')
+      repeat: no-repeat
+      size: 9.6%
+      position: center top
+  .nav-desktop
+    display: none
+  
+  .nav
+    display: none
+    width: calc( 100% - 48px )
+    height: 305px
+    background-color: var.$White
+    position: absolute
+    top: 105px
+    left: 50%
+    transform: translateX(-50%)
+
+    &__container
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    &__menu
+      position: relative
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-evenly
+      list-style: none
+
+      &-link
+        transition: all 0.3s ease-in-out
+        a
+          text-decoration: none
+          color: var.$Dark-grayish-blue
+          font-size: 20px
+          font-weight: 600
+        &:hover, a:hover
+          color: var.$Very-dark-desaturated-blue
+          transform: scale(1.1)
+        &--active
+          border-radius: 28px
+          display: grid
+          place-content: center
+          font-family: var.$font-fraunces
+          text-transform: uppercase
+          width: 140px
+          height: 56px
+          color: var.$Very-dark-desaturated-blue !important
+          background-color: var.$Yellow !important
+          
+          &:hover
+            cursor: pointer
+            color: var.$Very-dark-grayish-blue !important
+            background-color: var.$Yellow-border !important
+
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        top: -24px
+        right: 0
+        border-top: 26px solid transparent
+        border-right: 26px solid var.$White
+
+.main
+
+  .services
+    display: flex
+    flex-direction: column
+
+  .card-service
+    &__img
+      &--transform, &--stand
+        height: 246px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+      &--transform
+        background-image: url('../images/mobile/image-transform.jpg')
+      &--stand
+        background-image: url('../images/mobile/image-stand-out.jpg')
+
+    &__details
+      height: 342px
+      text-align: center
+      &-title
+        margin: auto
+        width: 211px
+        margin-top: 50px
+        font-family: var.$font-fraunces
+        font-weight: 900
+        font-size: 25px
+        line-height: 30.83px
+      &-description
+        margin: 20px auto
+        width: 253px
+        height: 123px
+        font-family: var.$font-barlow
+        font-size: 14px
+        color: var.$Dark-grayish-blue
+        line-height: 24px
+
+      &-btn
+        background-color: var.$White
+        position: relative
+        border: none
+        font-family: var.$font-fraunces
+        font-weight: 900
+        font-size: 13px
+        text-transform: uppercase
+        z-index: 1
+        transition: all 0.3s ease-in-out
+
+        a, &:active
+          text-decoration: none
+          color: var.$Very-dark-desaturated-blue
+        &:hover
+          cursor: pointer
+          transform: scale(1.1)
+
+        &--transform::before
+          background: var.$Yellow-border
+        &--transform:hover::before
+          background: var.$Yellow
+
+        &--stand::before
+          background: var.$Soft-red-border
+        &--stand:hover::before
+          background: var.$Soft-red
+
+        &::before
+          content: ''
+          position: absolute
+          left: -5px
+          bottom: 0
+          width: calc( 100% + 10px)
+          height: 5px
+          border-radius: 12px
+          z-index: -1
+
+    &__others-services
+      height: 471px
+      padding-bottom: 52px
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center -60px
+      &-title
+        margin-bottom: 24px
+        font-family: var.$font-fraunces
+        font-weight: 900
+        font-size: 24px
+      &-description
+        margin: 0 auto
+        width: 271px
+        font-size: 13px
+        line-height: 21px
+        text-align: center
+    &__graphic-design
+      color: var.$Dark-desaturated-cyan
+      background-image: url('../images/mobile/image-graphic-design.jpg')
+    &__photography
+      color: var.$Dark-blue
+      background-image: url('../images/mobile/image-photography.jpg')
+
+  .testimonials
+    height: 987px
+    text-align: center
+
+    &__title
+      margin-top: 50px
+      font-family: var.$font-fraunces
+      font-weight: 700
+      font-size: 12.5px
+      text-transform: uppercase
+      letter-spacing: 0.28em
+      color: var.$Grayish-blue
+      leading-trim: both
+      text-edge: cap
+    &__client
+      &-image
+        width: 57px
+        height: 57px
+        border-radius: 100%
+        margin: 50px 0 28px 0
+      &-testimonial
+        margin: 0 auto 26px
+        width: 253px
+        font-size: 14px
+        line-height: 25px
+        letter-spacing: -0.005em
+        color: var.$Dark-grayish-blue
+      &-name
+        margin-bottom: 10px
+        font-family: var.$font-fraunces
+        font-weight: 900
+        font-size: 15px
+      &-profession
+        font-size: 11px
+        color: var.$Grayish-blue
+
+  .gallery
+    height: 300px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    &__img
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      &-milk
+        background-image: url('../images/mobile/image-gallery-milkbottles.jpg')
+      &-orange
+        background-image: url('../images/mobile/image-gallery-orange.jpg')
+      &-cone
+        background-image: url('../images/mobile/image-gallery-cone.jpg')
+      &-sugar
+        background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg')
+
+.footer
+  height: 274px
+  text-align: center
+  background-color: var.$Dark-moderate-cyan
+  &__logo
+    margin: 50px auto 32px
+    transition: all 0.3s ease
+    &:hover
+      cursor: pointer
+  &__menu
+    list-style: none
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    &-link
+      margin-bottom: 60px
+      transition: all 0.3s ease
+      a, a:active, a:visited
+        text-decoration: none
+        color: var.$Dark-moderate-cyan-text
+      &:hover, a:hover
+        color: var.$White
+        cursor: pointer
+        transform: scale(1.1)
+
+  &__social-icons
+    width: 50%
+    margin: auto
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    &-icon
+      width: 17px
+      height: 17px
+      display: grid
+      place-content: center
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      transition: all 0.3s ease
+      &:hover
+        cursor: pointer
+        transform: scale(1.2)
+      &-facebook
+        background-image: url('../images/icon-facebook.svg')
+        &:hover
+          background-image: url('../images/icon-facebook-white.svg')
+      &-instagram
+        background-image: url('../images/icon-insta.svg')
+        &:hover
+          background-image: url('../images/icon-insta-white.svg')
+      &-twitter
+        background-image: url('../images/icon-twitter.svg')
+        &:hover
+          background-image: url('../images/icon-twitter-white.svg')
+      &-pinterest
+        background-image: url('../images/icon-pinterest.svg')
+        &:hover
+          background-image: url('../images/icon-pint-white.svg')

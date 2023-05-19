@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="nav__container">
+        <a href="#"> <img src="./images/logo.svg" alt="" class="header__logo"></a>
+        <button id="btn-menu" class="header__btn-menu">
+          <img src="./images/icon-hamburger.svg" alt="icon for menu mobile">
+        </button>
+        <nav id="nav-mobile" class="nav">
+          <ul class="nav__menu">
+            <li class="nav__menu-link"><a href="#about">About</a></li>
+            <li class="nav__menu-link"><a href="#services">Services</a></li>
+            <li class="nav__menu-link"><a href="#proyects">Proyects</a></li>
+            <li class="nav__menu-link"><a class="nav__menu-link--active"  href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-desktop">
+          <ul class="nav-desktop__menu">
+            <li class="nav-desktop__menu-link"><a  href="#about">About</a></li>
+            <li class="nav-desktop__menu-link"><a href="#services">Services</a></li>
+            <li class="nav-desktop__menu-link"><a href="#proyects">Proyects</a></li>
+            <li class="nav-desktop__menu-link"><a class="nav-desktop__menu-link--active" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 id="about" class="header__title">We are creatives</h1>
+      <div class="header__icon-arrow-down"></div>
+    </header>
+
+    <main class="main">
+      <div class="services" id="services">
+        <div class="card-service card-service__img--transform" title="Transform your brand"></div>
+        <section class="card-service card-service__details">
+          <h2 class="card-service__details-title">Transform your brand</h2>
+          <p class="card-service__details-description">
+            We are a full-service creative agency specializing in helping brands grow fast.
+            Engage your clients through compelling visuals that do most of the marketing for you.
+          </p>
+          <button class="card-service__details-btn card-service__details-btn--transform"><a href="#">Learn more</a></button>
+        </section>
+
+        <div class="card-service card-service__img--stand" title="Stand out to the right audience"></div>
+        <section class="card-service card-service__details">
+          <h2 class="card-service__details-title">Stand out to the right audience</h2>
+          <p class="card-service__details-description">
+            Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+            we’ll build and extend your brand in digital places.
+          </p>
+          <button class="card-service__details-btn card-service__details-btn--stand"><a href="#">Learn more</a></button>
+        </section>
+
+        <section class="card-service card-service__others-services card-service__graphic-design">
+          <h2 class="card-service__others-services-title">Graphic design</h2>
+          <p class="card-service__others-services-description">
+            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+          </p>
+        </section>
+        <section class="card-service card-service__others-services card-service__photography">
+          <h2 class="card-service__others-services-title">Photography</h2>
+          <p class="card-service__others-services-description">
+            Increase your credibility by getting the most stunning, high-quality photos that improve your business
+            image.
+          </p>
+        </section>
+      </div>
+
+
+      <section class="testimonials" id="proyects">
+        <h2 class="testimonials__title"> Client testimonials</h2>
+        <div class="testimonials__container">
+          <div class="testimonials__client">
+            <img src="./images/image-emily.jpg" alt="Photo client testimonial for Emily"
+              class="testimonials__client-image">
+            <p class="testimonials__client-testimonial">
+              We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+            </p>
+            <p class="testimonials__client-name">Emily R.</p>
+            <p class="testimonials__client-profession">Marketing Director</p>
+          </div>
+          <div class="testimonials__client">
+            <img src="./images/image-thomas.jpg" alt="Photo client testimonial for Thomas"
+              class="testimonials__client-image">
+            <p class="testimonials__client-testimonial">
+              Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+              enjoyable experience.
+            </p>
+            <p class="testimonials__client-name">Thomas S.</p>
+            <p class="testimonials__client-profession">Chief Operating Officer</p>
+          </div>
+          <div class="testimonials__client">
+            <img src="./images/image-jennie.jpg" alt="Photo client testimonial for Jennie"
+              class="testimonials__client-image">
+            <p class="testimonials__client-testimonial">
+              Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+            </p>
+            <p class="testimonials__client-name">Jennie F.</p>
+            <p class="testimonials__client-profession">Business Owner</p>
+          </div>
+        </div>
+      </section>
+      <div class="gallery">
+        <div class="gallery__img gallery__img-milk"></div>
+        <div class="gallery__img gallery__img-orange"></div>
+        <div class="gallery__img gallery__img-cone"></div>
+        <div class="gallery__img gallery__img-sugar"></div>
+      </div>
+    </main>
+
+    <footer class="footer" id="contact">
+      <a href="#"><img src="./images/logo-footer.svg" alt="Logo Sunnyside" class="footer__logo"></a>
+      <ul class="footer__menu">
+        <li class="footer__menu-link"><a href="#">About</a></li>
+        <li class="footer__menu-link"><a href="#">Services</a></li>
+        <li class="footer__menu-link"><a href="#">Proyects</a></li>
+      </ul>
+      <div class="footer__social-icons">
+        <div class="footer__social-icons-icon footer__social-icons-icon-facebook"></div>
+        <div class="footer__social-icons-icon footer__social-icons-icon-instagram"></div>
+        <div class="footer__social-icons-icon footer__social-icons-icon-twitter"></div>
+        <div class="footer__social-icons-icon footer__social-icons-icon-pinterest"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
