@@ -513,10 +513,11 @@ body {
     background-image: url("../images/desktop/image-photography.jpg");
   }
   .main .testimonials {
-    height: 763px;
+    height: 763px !important;
+    padding-top: 160px;
   }
   .main .testimonials__title {
-    margin: 160px auto 80px;
+    margin: 0 auto 80px;
     font-size: 20px;
     letter-spacing: 0.26em;
   }
